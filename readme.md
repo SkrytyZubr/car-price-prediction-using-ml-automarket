@@ -14,6 +14,31 @@
 
 ---
 
+## 📊 Data Insights & Visualizations
+Below are the key analytical findings generated from the dataset used to train the model.
+
+### 1. What Drives the Price? (Feature Importance)
+The **XGBoost** model identified the most critical factors influencing car prices. As expected, **Year (Production Year)** and **Engine Power (HP)** are dominant, but derived features like `hp_per_liter` play a significant role.
+![Feature Importance](charts/wykres_1_feature_importance.png)
+
+### 2. Market Correlation Matrix
+An analysis of relationships between numerical variables. We can observe a strong negative correlation between **Mileage** and **Price**, and a positive correlation between **Horsepower** and **Price**.
+![Correlation Matrix](charts/wykres_2_korelacja.png)
+
+### 3. Impact of Equipment (NLP Analysis)
+Using Text Mining techniques, we extracted features like **4x4 Drive** and **Sport Packages** (M-Pakiet, AMG, S-Line) from listings. The chart below proves that cars with these features hold significantly higher value.
+![Equipment Impact](charts/wykres_3_wyposazanie.png)
+
+### 4. Depreciation Curve
+Visualizing how car value decreases over time. The model accounts for this non-linear trend using the `Age²` feature.
+![Depreciation](charts/wykres_4_utrata_wartosci.png)
+
+### 5. Brand Price Distribution
+A comparison of the top 15 most popular brands in the dataset. Premium brands (BMW, Audi, Mercedes) show a much wider price range compared to budget-friendly options (Opel, Ford).
+![Brand Ranking](charts/wykres_5_ranking_marek.png)
+
+---
+
 ## 🎯 Key Features
 
 ### 1. 💰 Intelligent Valuation Calculator
