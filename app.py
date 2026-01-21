@@ -84,7 +84,7 @@ with tab1:
         
         # Parametry
         current_year = datetime.datetime.now().year
-        s_year = st.slider("Rok produkcji", 2000, current_year + 1, 2020)
+        s_year = st.slider("Rok produkcji", 2000, current_year, 2020)
         s_mileage = st.number_input("Przebieg (km)", 0, 500000, 150000, step=5000)
         s_hp = st.number_input("Moc (KM)", 50, 800, 150)
         
@@ -205,9 +205,13 @@ with tab2:
             
         with c2:
             st.subheader("3. Krzywa amortyzacji")
-            df_line = df.groupby('year')['price'].median().reset_index()
+            
+            # FILTROWANIE: Bierzemy tylko lata 2000 - 2026
+            mask = (df['year'] >= 2000) & (df['year'] <= 2026)
+            df_line = df[mask].groupby('year')['price'].median().reset_index()
+            
             fig_line = px.line(df_line, x='year', y='price', markers=True,
-                               title="Mediana ceny wg rocznika")
+                            title="Mediana ceny wg rocznika (2000-2026)")
             st.plotly_chart(fig_line, use_container_width=True)
 
     else:
