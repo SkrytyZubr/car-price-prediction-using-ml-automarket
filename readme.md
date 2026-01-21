@@ -85,6 +85,7 @@ We didn't just throw raw data into the model. We created derived features to cap
 ├── model_kolumny.pkl       # Feature columns list
 ├── mapa_marka_model.pkl    # Dictionary for dynamic dropdowns
 └── README.md               # Project documentation
+```
 
 ---
 
@@ -108,8 +109,8 @@ streamlit run app.py
 
 ## 📈 Future Improvements
 
-*Deep Learning integration (Neural Networks) for price prediction.
+* **Deep Learning integration (Neural Networks) for price prediction.**
 
-*Real-time API connection to live listings.
+* **Real-time API connection to live listings.**
 
-*Image recognition to assess car condition from photos.
+* **Image recognition to assess car condition from photos.**
