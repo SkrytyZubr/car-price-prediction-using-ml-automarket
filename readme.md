@@ -27,7 +27,7 @@ An analysis of relationships between numerical variables. We can observe a stron
 
 ### 3. Impact of Equipment (NLP Analysis)
 Using Text Mining techniques, we extracted features like **4x4 Drive** and **Sport Packages** (M-Pakiet, AMG, S-Line) from listings. The chart below proves that cars with these features hold significantly higher value.
-![Equipment Impact](charts/wykres_3_wyposazanie.png)
+![Equipment Impact](charts/wykres_3_wyposazenie.png)
 
 ### 4. Depreciation Curve
 Visualizing how car value decreases over time. The model accounts for this non-linear trend using the `Age²` feature.
