@@ -152,7 +152,7 @@ with tab1:
                     st.info(f"📊 **Margines błędu:**\n+/- {MAE_VALUE:,.0f} PLN (ok. {error_pct:.1f}%)")
 
                 st.caption(f"Specyfikacja: {s_brand} {s_model}, {s_year}, {s_hp} KM, {s_capacity} cm3")
-                st.progress(min(pred_pln / 400000, 1.0))
+                # st.progress(min(pred_pln / 400000, 1.0))
                 
             except Exception as e:
                 st.error(f"Błąd obliczeń: {e}")
